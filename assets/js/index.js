@@ -158,7 +158,7 @@ game.guess = function(letter) {
     const chars = word.split('');
 
     if (guesses.includes(letter)) {
-        return alert('you\'ve already guessed this!');
+        alert('you\'ve already guessed this!');
 
     } else if (chars.includes(letter)) {
         // fill in the letter
@@ -170,7 +170,7 @@ game.guess = function(letter) {
 
     } else if (this.lives < 2) {
         // player lost
-        return this.end();
+        this.end();
     } else {
         // player guessed incorrectly
         hangman.showNextPart();
