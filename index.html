@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Javascript Hangman</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="scoreboard" class="horizontal-flex-centered">
@@ -27,6 +27,11 @@
         <main class="vertical-flex-centered">
             <strong id="result">placeholder</strong>
             <svg height="500" width="500">
+                <!-- post -->
+                <line x1="350" y1="450" x2="500" y2="450" stroke="#000" stroke-width="2"></line>
+                <line x1="425" y1="5" x2="425" y2="450" stroke="#000" stroke-width="2"></line>
+                <line x1="250" y1="5" x2="425" y2="5" stroke="#000" stroke-width="2"></line>
+                <line id="hook" x1="250" y1="50" x2="250" y2="5" stroke="#000" stroke-width="2"></line>                    
                 <!-- head -->
                 <circle id="head" cx="250" cy="100" r="50" stroke="#000" stroke-width="2" fill="transparent"></circle>
                 <!-- torso -->
@@ -56,6 +61,6 @@
             <p>&copy; 2017 <a href="https://github.com/charliekenney23" target="_blank">Charles Kenney</a></p>
         </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

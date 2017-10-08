@@ -18,4 +18,5 @@
     <li>Null</li>
     <li>String</li>
     <li>Prototype</li>
+    <li>Generator</li>
 </ol>
