@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/**
+ * Global styles
+ */
+* {
+    font-family: 'Quicksand', arial, sans-serif;
+    text-align: center;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#result {
+    visibility: hidden;
+    font-size: 1.3em;
+}
+
+/**
+ * Helper Styles
+ */
+.vertical-flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.horizontal-flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+#wrapper {
+    min-height: 100vh;
+}
+
+#word {
+    font-size: 1.8em;
+}
+
+/**
+ * Hangman styles
+ */
+svg > * {
+    transition: opacity 400ms ease-in;
+}
+
+svg > *:hover {
+    cursor: pointer;
+    stroke: #9e0;
+}
+
+.eye:hover {
+    fill: #9e0;
+}
+
+/**
+ * Game UI Styles
+ */
+#message {
+    postion: absolute;
+    top: -50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hw-button {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 1px 2px;
+    transition: all 400ms ease-out;
+}
+
+.hw-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #aaa;
+    color: #fff;
+}
+
+.guess, .letter {
+    padding: 2px;
+    display: inline-block;
+}
+
+.correct {
+    color: #00EC64;
+}
+
+.incorrect {
+    color: #FE2617;
+}
+
+.game {
+    visibility: hidden;
+}
+
+#scoreboard {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    width: auto;
+    background: #444;
+    border-radius: 15px 0 0 15px;
+    padding: 10px 25px;
+}
+
+.metric {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.metric-name {
+    margin: 5px 0;
+    font-size: .95em;
+}
+
+.metric-container {
+    width: 50px;
+    margin: 3px;
+    color: #fff;
+}

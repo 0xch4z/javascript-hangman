@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scoreboard" class="horizontal-flex-centered">
+        <div class="metric-container vertical-flex-centered">
+            <span id="wins" class="metric">0</span>
+            <p class="metric-name">Wins</p>
+        </div>
+        <div class="metric-container vertical-flex-centered">
+            <span id="losses" class="metric">0</span>
+            <p class="metric-name">Losses</p>
+        </div>
+    </div>
+    <div id="wrapper" class="vertical-flex-centered">
+        <header class="vertical-flex-centered">
+            <h1>Javascript Hangman</h1>
+            <p id="message">press <span class="hw-button">space</span> to continue</p>            
+        </header>
+        <main class="vertical-flex-centered">
+            <strong id="result">placeholder</strong>
+            <svg height="500" width="500">
+                <!-- head -->
+                <circle id="head" cx="250" cy="100" r="50" stroke="#000" stroke-width="2" fill="transparent"></circle>
+                <!-- torso -->
+                <line id="torso" x1="250" y1="150" x2="250" y2="300" stroke="#000" stroke-width="2"></line>
+                <!-- left arm -->
+                <line id="left-arm" x1="250" y1="200" x2="200" y2="250" stroke="#000" stroke-width="2"></line>
+                <!-- right arm -->
+                <line id="right-arm" x1="250" y1="200" x2="300" y2="250" stroke="#000" stroke-width="2"></line>
+                <!-- left leg -->
+                <line id="left-leg" x1="250" y1="300" x2="220" y2="375" stroke="#000" stroke-width="2"></line>
+                <!-- right leg -->
+                <line id="right-leg" x1="250" y1="300" x2="280" y2="375" stroke="#000" stroke-width="2"></line>
+                <!-- left eye -->
+                <circle id="left-eye" class="eye" cx="235" cy="90" r="5" stroke="#000"></circle>
+                <!-- right eye -->
+                <circle id="right-eye" class="eye" cx="265" cy="90" r="5" stroke="#000"></circle>
+                <!-- frown -->
+                <path id="frown" d="M235 120 h 30 v 2 h -30"/>
+            </svg>
+            <section>
+                <p id="word"></p>
+                <h3 class="game">Guesses: </h3>
+                <div id="guesses"></div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2017 <a href="https://github.com/charliekenney23" target="_blank">Charles Kenney</a></p>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
